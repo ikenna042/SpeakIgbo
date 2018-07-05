@@ -1,5 +1,13 @@
+
+
+
+
+
+
+
 package com.example.android.miwok;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -14,6 +22,15 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_category);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                new NumbersFragment()).commit();
+    }
+}
+/*
     //Handles media player
     private MediaPlayer mPlayer;
 
@@ -45,6 +62,7 @@ public class NumbersActivity extends AppCompatActivity {
         }
     };
 
+    @TargetApi(11)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,9 +131,12 @@ public class NumbersActivity extends AppCompatActivity {
         });
     }
 
-        /**
+        */
+/**
          * Clean up media player by releasing its resources.
-         */
+         *//*
+
+        @TargetApi(11)
         private void releaseMediaPlayer() {
             //If the media player is not null, then it may be playing a sound.
         if (mPlayer != null) {
@@ -134,12 +155,15 @@ public class NumbersActivity extends AppCompatActivity {
 
     }
 
-    /**
+    */
+/**
      * Method to clean up resources when user leaves the activity
-     */
+     *//*
+
     @Override
     protected void onStop() {
         super.onStop();
         releaseMediaPlayer();
     }
 }
+*/
