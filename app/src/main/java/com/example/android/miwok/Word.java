@@ -23,7 +23,8 @@ public class Word {
         mIgboTranslation = igboTranslation;
         mAudioResourceId = audioResourceId;
     }
-    public Word(String defaultTranslation, String igboTranslation, int imageResourceId, int audioResourceId) {
+    public Word(String defaultTranslation, String igboTranslation, int imageResourceId,
+                int audioResourceId) {
         mDefaultTranslation = defaultTranslation;
         mIgboTranslation = igboTranslation;
         mImageResourceId = imageResourceId;
