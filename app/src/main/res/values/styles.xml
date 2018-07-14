@@ -8,15 +8,17 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="MiwokAppBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <!-- App bar style -->
+    <!--<style name="MiwokAppBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
         <item name="android:background">@color/primary_dark_color</item>
-    </style>
-
-   <!-- &lt;!&ndash; App bar style &ndash;&gt;
-    <style name="MiwokAppBarStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid.Inverse">
-        &lt;!&ndash; Remove the shadow below the app bar &ndash;&gt;
         <item name="elevation">0dp</item>
     </style>-->
+
+    <!-- App bar style -->
+    <style name="MiwokAppBarStyle" parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid.Inverse">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
+    </style>
 
     <!-- Style for a tab that displays a category name -->
     <style name="CategoryTab" parent="Widget.Design.TabLayout">
