@@ -1,10 +1,5 @@
-package com.example.android.miwok;
+package com.example.android.speakigbo;
 
-import android.media.MediaPlayer;
-
-/**
- * Created by IKENNA on 4/28/2018.
- */
 
 public class Word {
     /** Default translation for the word */

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary_color"
     android:orientation="vertical"
-    tools:context="com.example.android.miwok.MainActivity">
+    tools:context="com.example.android.speakigbo.MainActivity">
 
     <!--Add android.support.design.widget.TabLayout to add tabs to my viewPager after adding the
     design support library in the gradle file-->

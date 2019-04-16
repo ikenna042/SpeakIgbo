@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.speakigbo;
 
 
 import android.app.Activity;
@@ -14,13 +14,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by IKENNA on 4/30/2018.
- */
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    /**Resource ID for backgroud color for this list of words*/
+    /**Resource ID for background color for this list of words*/
     private int mColorResourceId;
 
     public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
@@ -32,28 +29,29 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.list_item, parent, false);
         }
 
         //Get the {@link Word} object located at this position in the list
         Word currentWord = getItem(position);
 
         //Find the TextView in the list_item.xml layout with the ID miwok_text_view
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
+        TextView miwokTextView = listItemView.findViewById(R.id.igbo_text_view);
         miwokTextView.setText(currentWord.getmIgboTranslation());
 
         //Find the TextView in the list_item.xml layout with the ID default_text_view
-        TextView defaulTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
+        TextView defaulTextView = listItemView.findViewById(R.id.default_text_view);
         defaulTextView.setText(currentWord.getmDefaultTranslation());
 
         //Find the ImageView in the list_item.xml layout with the ID imageResourceId
-        ImageView imageResourceId = (ImageView) listItemView.findViewById(R.id.image_view);
+        ImageView imageResourceId = listItemView.findViewById(R.id.image_view);
 
         if(currentWord.hasImage()) {
             //Set the ImageView to the image resource specified in the current Word
             imageResourceId.setImageResource(currentWord.getmImageResourceId());
 
-            //Make sure the imageview is visible
+            //Make sure the ImageView is visible
             imageResourceId.setVisibility(View.VISIBLE);
         }
         else{
